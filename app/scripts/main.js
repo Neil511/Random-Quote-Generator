@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    console.log('Loaded main.js!');
+    // console.log('Loaded main.js!');
 
     $('#generate').on('click', function(){
         // Function to fetch the quote when button clicked
@@ -13,9 +13,9 @@ $(document).ready(function(){
             }
         }).done(function(data){
             var obj = JSON.parse(data);
-            console.log(obj);
-            console.log(obj.quote);
-            console.log(obj.author);
+            // console.log(obj);
+            // console.log(obj.quote);
+            // console.log(obj.author);
 
             $('#quote').text(obj.quote);
             $('#author').text('- ' + obj.author);

@@ -10,35 +10,47 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 }
 
 html {
-  font-size: 10px;
   color: #fff;
+  font-size: 10px;
 }
 
 .container-with-margin {
   box-sizing: border-box;
+  margin: 0 auto;
   max-width: 120rem;
   overflow: hidden;
   width: 100%;
 }
 .hero {
   @extend %text;
-  background-color: #000;
+  background: #000 url('../images/hero-bg.jpg') no-repeat center center / cover;
   padding: 8% 4%;
   text-align: center;
   vertical-align: middle;
 
   h1 {
     font: 700 4rem Open-Sans, sans-serif;
-    margin: 3rem 0;
+    margin: 0 0 3rem;
   }
 
   p {
-    margin: 2rem 0;
+    margin: 1.8rem 0;
   }
 
-  .btn {
+  .button {
+    background-color: rgba(#000, .2);
+    border: .1rem solid #fff;
+    border-radius: .3rem;
+    display: inline-block;
     font: 700 2rem Open-Sans, sans-serif;
-    margin-top: 3rem;
+    padding: 0.8rem 2.5rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: rgba(#fff, .2);
+      cursor: pointer;
+    }
   }
 }
 

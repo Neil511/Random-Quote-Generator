@@ -11,8 +11,14 @@ $(document).ready(function(){
                 'Content-Type': 'application/x-www-form-urlencoded',
                 'Accept': 'application/json'
             }
-        }).done(function(){
-            $('#quote').text('Quote changed!');
+        }).done(function(data){
+            var obj = JSON.parse(data);
+            console.log(obj);
+            console.log(obj.quote);
+            console.log(obj.author);
+
+            $('#quote').text(obj.quote);
+            $('#author').text('- ' + obj.author);
         });
     });
 });
